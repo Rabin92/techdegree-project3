@@ -166,6 +166,7 @@ input[type="tel"]:focus,
 select:focus,
 textarea:focus {
     border: 2px solid #191970;
+    transition: .3s;
 }
 
 /* ***************************** PSEUDO-ELEMENTS **************************** */
