@@ -1,0 +1,298 @@
+/* ******************************* BASE STYLES ****************************** */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+   background-color: #f0ffff;
+   font: normal 1em/1.5 'Lexend Deca', sans-serif;
+    /* Shorthand: font-weight, font-size, lin-height and font-family; */
+}
+
+fieldset {
+    border: none;
+}
+
+.flex,
+.flex-items,
+.flex-ta {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ***************************** HEADER SECTION ***************************** */
+
+.head-main {
+    font-family: 'Bree Serif', serif;
+    color: #008080;
+}
+
+.head-p {
+    color: #808080;
+    font-family: 'Bree Serif', serif;
+}
+ 
+.main-header {
+    text-align: center;
+    margin: 30px 0 30px 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.name {
+    font-family: 'Cinzel Decorative', cursive;
+    background-color: #008080;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0.50em;
+    text-shadow: 2px 2px 1px #191970;
+    border-bottom: solid 2px #8b0000;
+}
+
+h2.heading,
+h2.heading-n {
+    margin: 5px 0 15px 0;
+    color: #2f4f4f;
+    font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 0 1px 1px #8fbc8f;
+    text-transform: uppercase;
+}
+
+/* ****************************** FORM SECTION ****************************** */
+
+.flex input,
+.flex select {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+    border-radius: 0.30rem;
+}
+
+.flex-ta textarea {
+    border-radius: 0.30rem;
+}
+
+.flex-ta label {
+    margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+    padding-left: 8px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#zip-code {
+    max-width: 50%;
+}
+
+.title-1 {
+    margin-bottom: 10px;
+}
+
+.title {
+    margin: 20px 0 10px 0;
+}
+
+input[type="submit"] {
+    padding: 20px;
+    border-radius: 0.20rem;
+    background-color: #228b22;
+    width: 100%;
+    cursor: pointer;
+    color: #fff;
+}
+
+.button {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+#sign-up {
+    font-size: 1.3rem;
+}
+
+/* ************ REMOVING DEFAULT APPEARENCE ON RADIOS/CHECKBOXES ************ */
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1.2em; 
+  height: 1.2em;
+  border: 1.70px solid grey;
+  background-color: #fff;
+  color: green;
+
+  -webkit-appearance: none; 
+  appearance: none;
+}  /* Removes system-level styling */
+
+input[type="radio"]::before,
+input[type="checkbox"]::before {
+  content: "✔";  
+  visibility: hidden;
+  position: absolute;
+  left: 15px; 
+}
+
+input[type="radio"]:checked::before,
+input[type="checkbox"]:checked::before {
+  visibility: visible;
+}
+
+.form-select {
+    position: relative;
+}
+
+/* ****************************** PSEUDO-CLASS ****************************** */
+
+input[type="submit"]:hover {
+    background-color: #006400;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border: 2px solid #191970;
+}
+
+/* ***************************** PSEUDO-ELEMENTS **************************** */
+
+h2.heading::before {
+    content: url(../images/contact.png);
+    margin-right: 8px;
+}
+
+h2.heading-n::before {
+    content: url(../images/newsletter.png);
+    margin-right: 8px;
+    max-width: 100px;
+}
+
+#zip-code::placeholder,
+#feedback::placeholder {
+    text-align: left;
+    font-size: medium;
+}
+
+input::placeholder {
+    text-align: right;
+    font-style: italic;
+    padding: 0.32rem 0.50rem 0 0;
+    font-size: x-small;
+}
+
+input#fullname:hover::placeholder,
+input[type="email"]:hover::placeholder {
+    color: red;
+    font-size: small;
+}
+
+input[type="tel"]:hover::placeholder,
+input#address:hover::placeholder,
+input#city:hover::placeholder {
+    color: orange;
+    font-size: small;
+}
+
+/* ***************************** HORIZONTAL RULE **************************** */
+
+.hr {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.hr-1 {
+    border: 2.5px solid #2f4f4f;
+}
+
+.hr-2 {
+    border: 1.1px solid #2f4f4f;
+    margin-bottom: 10px;
+}
+
+.hr-3 {
+    border: 1.1px dashed #2f4f4f;
+    margin-bottom: 10px;
+}
+
+/* ********************************* FOOTER ********************************* */
+
+.main-footer {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* ****************************** MEDIA QUERIES ***************************** */
+
+@media (min-width: 768px) {
+
+    .wrap {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    .flex-items {
+        flex-direction: row;
+    }
+
+     .flex input,
+     .flex select,
+     .flex textarea {
+        flex-grow: 1;
+    }
+
+    .flex label {
+        flex-basis: 22%;
+    }
+
+    #zip-code {
+        max-width: 25%;
+    }
+
+    .head-main {
+        font-size: 1.6rem;
+    }
+
+    #feedback {
+        margin-bottom: 20px;
+    }
+
+/* ***************************** PSEUDO ELEMENT ***************************** */
+
+    input::placeholder {
+        text-align: right;
+        font-style: italic;
+        padding: 0.32rem 0.50rem 0 0;
+        font-size: small;
+    }
+
+    input#fullname:hover::placeholder,
+    input[type="email"]:hover::placeholder {
+        color: red;
+        font-size: medium;
+    }
+
+    input[type="tel"]:hover::placeholder,
+    input#address:hover::placeholder,
+    input#city:hover::placeholder {
+        color: orange;
+        font-size: medium;
+    }
+}
+
+
+
+
