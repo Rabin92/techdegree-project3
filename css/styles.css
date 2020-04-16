@@ -1,4 +1,4 @@
-/* ******************************* BASE STYLES ****************************** */
+******************************* BASE STYLES ******************************
 
 * {
     box-sizing: border-box;
@@ -7,7 +7,7 @@
 body {
    background-color: #f0ffff;
    font: normal 1em/1.5 'Lexend Deca', sans-serif;
-    /* Shorthand: font-weight, font-size, lin-height and font-family; */
+    /* Shorthand: font-weight, font-size, line-height and font-family; */
 }
 
 fieldset {
@@ -87,8 +87,8 @@ textarea {
     padding-left: 8px;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
     margin-right: 10px;
 }
 
@@ -125,28 +125,29 @@ input[type="submit"] {
 
 /* ************ REMOVING DEFAULT APPEARENCE ON RADIOS/CHECKBOXES ************ */
 
-input[type="radio"],
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
   width: 1.2em; 
   height: 1.2em;
   border: 1.70px solid grey;
   background-color: #fff;
   color: green;
+  cursor: pointer;
 
   -webkit-appearance: none; 
   appearance: none;
 }  /* Removes system-level styling */
 
-input[type="radio"]::before,
-input[type="checkbox"]::before {
+input[type="checkbox"]::before,
+input[type="radio"]::before {
   content: "✔";  
   visibility: hidden;
   position: absolute;
   left: 15px; 
 }
 
-input[type="radio"]:checked::before,
-input[type="checkbox"]:checked::before {
+input[type="checkbox"]:checked::before,
+input[type="radio"]:checked::before {
   visibility: visible;
 }
 

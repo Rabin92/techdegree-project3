@@ -92,8 +92,8 @@
                     </div>
             </fieldset>
                 
-    <!-- ***************************** RADIO INPUT ***************************** -->
-                
+<!-- *************************** INPUT CHECKBOX **************************** -->
+
                 <div class="hr">
                     <hr class="hr-3">
                 </div>
@@ -103,26 +103,26 @@
                         <legend><h2 class="heading-n">Newsletter</h2></legend>
                         <p class="title-1">Select the newsletters you would like to receive:</p>
                     
-                        <input type="radio" id="html-news" name="news" value="HTML">
+                        <input type="checkbox" id="html-news" name="news">
                         <label for="html-news">HTML News</label><br>
 
-                        <input type="radio" id="css-news" name="news" value="CSS">
+                        <input type="checkbox" id="css-news" name="news">
                         <label for="css-news">CSS News</label><br>
                         
-                        <input type="radio" id="js-news" name="news" value="Javascript">
+                        <input type="checkbox" id="js-news" name="news">
                         <label for="js-news">Javascript News</label>
 
-    <!-- *************************** INPUT CHECKBOX **************************** -->
+<!-- ***************************** RADIO INPUT ***************************** -->
 
                         <p class="title">Newsletter format:</p>
 
-                        <input type="checkbox" id="html" name="newsletter-html">
-                        <label for="html">HTML</label><br>
+                       <input type="radio" id="html" name="news-letter" value="html">
+                       <label for="html">HTML</label><br>
 
-                        <input type="checkbox" id="plaintext" name="plain-text">
-                        <label for="plaintext">Plain text</label>
+                       <input type="radio" id="plaintext" name="news-letter" value="plain text">
+                       <label for="plaintext">Plain text</label><br>
 
-                    <div class="flex-ta">
+                        <div class="flex-ta">
                         <label for="feedback" class="title">Other topics you'd like to hear about:</label>
                         <textarea name="user-feedback" id="feedback" rows="8" placeholder="Drop your Topics here ...." required></textarea>
                     </div>
