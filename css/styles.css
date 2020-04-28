@@ -287,19 +287,13 @@ input#city:hover::placeholder {
         font-style: italic;
         padding: 0.32rem 0.50rem 0 0;
         font-size: small;
+        opacity: 0;
+        transition: opacity .5s 0s, color .5s .15s;
+        transition-timing-function: ease-in-out;
     }
 
-    input#fullname:hover::placeholder,
-    input[type="email"]:hover::placeholder {
-        color: red;
-        font-size: medium;
-    }
-
-    input[type="tel"]:hover::placeholder,
-    input#address:hover::placeholder,
-    input#city:hover::placeholder {
-        color: orange;
-        font-size: medium;
+    input:hover::placeholder {
+        opacity: 1;
     }
 }
 
