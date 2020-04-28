@@ -111,6 +111,9 @@ input[type="submit"] {
     width: 100%;
     cursor: pointer;
     color: #fff;
+    transition-property: background-color, border-radius;
+    transition-duration: .5s, 1s;
+    transition-delay: 0s, .10s;
 }
 
 .button {
@@ -159,6 +162,11 @@ input[type="radio"]:checked::before {
 
 input[type="submit"]:hover {
     background-color: #006400;
+    border-radius: 10px;
+}
+
+input[type="submit"]:active {
+    background-color: #1b5c1b;
 }
 
 input[type="text"]:focus,
