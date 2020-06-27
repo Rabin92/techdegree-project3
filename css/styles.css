@@ -147,6 +147,7 @@ input[type="submit"] {
 
 #sign-up {
   font-size: 1.3rem;
+  border: none;
 }
 
 /* ************ REMOVING DEFAULT APPEARANCE ON RADIOS/CHECKBOXES ************ */
